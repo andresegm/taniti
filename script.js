@@ -36,9 +36,18 @@ function filterAccommodations() {
 
     accommodationsItems.forEach(item => {
         const text = item.innerText.toLowerCase();
-        item.style.display = text.includes(filterValue) ? 'block' : 'none';
+        const type = item.getAttribute('data-type').toLowerCase();
+        const location = item.getAttribute('data-location').toLowerCase();
+
+        // Check if the filter value matches the text, type, or location
+        if (text.includes(filterValue) || type.includes(filterValue) || location.includes(filterValue)) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
     });
 }
+
 
 function scrollContainer(direction, containerClass) {
     // Scrolls the container left or right by set amount
