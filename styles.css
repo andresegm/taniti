@@ -455,7 +455,7 @@ html {
 /* Booking Page Styling */
 .booking-overlay {
     position: relative;
-    background-image: url('/images/snorkel.jpg');
+    background-image: url('images/snorkel.jpg');
     background-size: cover;
     background-position: center;
     padding: 80px 20px;
@@ -516,7 +516,7 @@ select {
 /* Contact Us Page Styling */
 .contact-overlay {
     position: relative;
-    background-image: url('/images/bungalows.jpg');
+    background-image: url('images/bungalows.jpg');
     background-size: cover;
     background-position: center;
     padding: 80px 20px;
