@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Taniti Island - Home</title>
+        <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-slogan">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.jpg" alt="Taniti Island Logo">
+                </a>
+                <span class="slogan">Where Paradise Meets Adventure</span>
+            </div>
+        </div>   
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="accommodations.html">Accommodations</a></li>
+                <li><a href="transportation.html" class="active">Transportation</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <form class="search-form" action="#" method="get">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit">Go</button>
+            </form>
+        </nav>
+    </header>
+    <div class="content-wrapper">
+    <section id="transportation">
+        <h2>Transportation Options</h2>
+        <div class="transportation-container">  
+            <div class="transportation-card">
+                <img src="images/airplane.jpg" alt="Airplane" class="transport-icon">
+                <h3>Airport</h3>
+                <p>Taniti's small airport accommodates jets and propeller planes.</p>
+                <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+            </div>
+            <div class="transportation-card">
+                <img src="images/bus.jpg" alt="Bus Service" class="transport-icon">
+                <h3>Bus Service</h3>
+                <p>Public and private buses run throughout the island.</p>
+                <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+            </div>
+            <div class="transportation-card">
+                <img src="images/taxi.jpg" alt="Taxi Service" class="transport-icon">
+                <h3>Taxi Service</h3>
+                <p>Available in Taniti City for convenient transport.</p>
+                <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+            </div>
+            <div class="transportation-card">
+                <img src="images/bike.jpg" alt="Bike Rental" class="transport-icon">
+                <h3>Bike Rental</h3>
+                <p>Explore Taniti City and Merriton Landing on two wheels.</p>
+                <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+            </div>
+            <div class="transportation-card">
+                <img src="images/car.jpg" alt="Car Rental" class="transport-icon">
+                <h3>Car Rental</h3>
+                <p>Rent a car from our local agency near the airport.</p>
+                <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+            </div>
+        </div>
+    </section>
+    <section id="transportation-recommendations">
+        <h2>Transportation Recommendations</h2>
+        <div class="recommendations-container">
+            <div class="recommendation-item">
+                <h3>Recommended for Families</h3>
+                <p>We suggest renting a car for the ultimate flexibility when traveling with family. Explore the island at your own pace!</p>
+            </div>
+            <div class="recommendation-item">
+                <h3>Best for Budget Travelers</h3>
+                <p>Consider using our public bus service for the most cost-effective way to get around Taniti Island.</p>
+            </div>
+            <div class="recommendation-item">
+                <h3>Ideal for Business Travelers</h3>
+                <p>Opt for a private shuttle to get to your meeting destinations quickly and efficiently.</p>
+            </div>
+        </div>
+    </section>
+    </div>
+    <footer>
+        <div class="footer-links">
+            <a href="index.html#about-island" class="about-link">About Taniti</a> | 
+            <a href="terms.html">Terms of Service</a> | 
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="images/twitter.png" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="images/instagram.png" alt="Instagram">
+            </a>
+        </div>
+        <p>&copy; 2024 Taniti Island</p>
+    </footer>
+    <script src="script.js"></script> 
+</body>
+</html>

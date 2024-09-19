@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taniti Island - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+</head>
+<body> 
+    <header>
+        <div class="header-container">
+            <div class="logo-slogan">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.jpg" alt="Taniti Island Logo">
+                </a>
+                <span class="slogan">Where Paradise Meets Adventure</span>
+            </div>
+        </div>             
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="accommodations.html">Accommodations</a></li>
+                <li><a href="transportation.html">Transportation</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <form class="search-form" action="#" method="get">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit">Go</button>
+            </form>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="images/main.jpg" alt="Beautiful view of Taniti Island" class="hero-image">
+        <h1>Welcome to Taniti Island</h1>
+        <p>Discover the beauty and adventure of our tropical paradise!</p>
+        <a href="booking.html" class="button">Book Your Stay</a>
+    </section>
+
+    <section id="key-attractions"> <!-- Removed the title -->
+        <div class="attractions-scroll-container">
+            <div class="attractions-list">
+                <div class="attraction-item">
+                    <h3>Rainforest Hike</h3>
+                    <img src="images/hike.jpg" alt="Explore the lush rainforest on a guided hike">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+                <div class="attraction-item">
+                    <h3>Beach Snorkeling</h3>
+                    <img src="images/snorkel.jpg" alt="Discover underwater life through snorkeling">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+                <div class="attraction-item">
+                    <h3>Volcano Tour</h3>
+                    <img src="images/volcano.jpg" alt="Experience an up-close tour of the active volcano">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+            </div>
+        </div>
+        <div class="see-all-attractions">
+            <a href="attractions.html" class="button">See All Attractions</a> <!-- New button -->
+        </div>
+    </section>
+
+    <section id="about-island" class="about-island">
+        <h2>About the Island</h2>
+        <div class="about-content">
+            <p>Taniti is a small, tropical island in the Pacific. While the island has an area of less than 500 square miles, the terrain is varied and includes both sandy and rocky beaches, a small but safe harbor, lush tropical rainforests, and a mountainous interior that includes a small, active volcano. Taniti has an indigenous population of about 20,000. Until a recent increase in tourism, most of the Tanitian economy was dominated by fishing or agriculture.</p>
+            <h3>Tourist Needs</h3>
+            <p><strong>Restaurants:</strong> Taniti currently has 10 restaurants: five serve mostly local fish and rice, three serve American-style meals, and two serve Pan-Asian cuisine.</p>
+            <p><strong>Grocery Stores:</strong> Taniti has two supermarkets, two smaller grocery stores, and one convenience store that is open 24 hours a day.</p>
+            <p><strong>Lodging:</strong> Taniti has a wide variety of lodging that ranges from an inexpensive hostel to one large, four-star resort. There are many small, family-owned hotels and a growing number of bed and breakfasts. All types of lodging are strictly regulated and regularly inspected by the Tanitian government.</p>
+            <p><strong>Entertainment:</strong> Most people visit Taniti to enjoy the beaches, explore the rainforest, and to visit the volcano. However, there are other things to do, including visiting a local history museum, going on chartered fishing tours, snorkeling, zip-lining in the rainforest, visiting several pubs, including a microbrewery, dancing at a new dance club, seeing a movie, taking helicopter rides, playing at an arcade, visiting art galleries, and bowling. Also, a nine-hole golf course should be operational by next year. Many of these activities are located in Merriton Landing, which is a rapidly developing area on the north side of Yellow Leaf Bay.</p>
+            <p><strong>Sightseeing:</strong> Most tourists spend most of their time in Taniti City, which boasts native architecture and nearby white, sandy beaches that encircle Yellow Leaf Bay. Other popular activities include boat or bus tours of the island, hikes in the rainforest, or visits to Taniti’s active volcano.</p>
+            <p><strong>Transportation:</strong> Almost all visitors arrive to Taniti by air, though some arrive on a small cruise ship that docks in Yellow Leaf Bay for one night per week. Taniti is served by a small airport that can accommodate small jets and propeller planes. Taniti is in the process of expanding the airport so larger jets will be able to land on the island within the next few years.</p>
+            <p><strong>Ground Transportation:</strong> Public buses serve Taniti City and run from 5 a.m. to 11 p.m. every day. Private buses serve the rest of the island. Taxis are available in Taniti City, and rental cars can be rented from a local rental agency near the airport. Bikes and helmets are available to rent from several vendors (helmets are required by law). Taniti City is fairly flat and very walkable. Many tourists stay in the area surrounding Merriton Landing: this area is easy to explore on foot.</p>
+            
+            <h3>Frequently Requested Information:</h3>
+            <ul>
+                <li>Power outlets are 120 volts (the same as in the United States).</li>
+                <li>Alcohol is not allowed to be served or sold between the hours of midnight and 9:00 a.m.</li>
+                <li>The drinking age on Taniti is 18 and the drinking age is not strictly enforced.</li>
+                <li>Many younger Tanitians speak fluent English. Very little English is spoken in rural areas, especially by the older residents.</li>
+                <li>There is one hospital and several clinics. The hospital has many multilingual employees.</li>
+                <li>Violent crime is very rare on Taniti, but as tourism increases, there are more reports of pickpocketing and other petty crimes.</li>
+                <li>Taniti enjoys a large number of national holidays, and many tourist attractions and restaurants will be closed on holidays, so visitors should plan accordingly.</li>
+                <li>Taniti uses the U.S. dollar as its currency, but many businesses will also accept euros and yen. Several banks facilitate currency exchange, and many businesses accept major credit cards.</li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html#about-island" class="about-link">About Taniti</a> | 
+            <a href="terms.html">Terms of Service</a> | 
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="images/twitter.png" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="images/instagram.png" alt="Instagram">
+            </a>
+        </div>
+        <p>&copy; 2024 Taniti Island</p>
+    </footer>
+
+    <script src="script.js"></script> 
+</body>
+</html>

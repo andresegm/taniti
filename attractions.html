@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taniti Island - Attractions</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-slogan">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.jpg" alt="Taniti Island Logo">
+                </a>
+                <span class="slogan">Where Paradise Meets Adventure</span>
+            </div>
+        </div>   
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html" class="active">Attractions</a></li>
+                <li><a href="accommodations.html">Accommodations</a></li>
+                <li><a href="transportation.html">Transportation</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <form class="search-form" action="#" method="get">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit">Go</button>
+            </form>
+        </nav>
+    </header>
+    
+    <section id="attractions">
+        <h2>Attractions</h2>
+        
+        <div class="map-button-container">
+            <button class="map-toggle-button" onclick="toggleMap()">View Island Map</button>
+        </div>
+
+        <div class="map-container" id="island-map" style="display:none;">
+            <img src="images/map.jpg" alt="Map of Taniti Island" class="attractions-map">
+        </div>
+        
+        <div class="filter-container">
+            <input type="text" id="filter-input" placeholder="Filter attractions..." onkeyup="filterAttractions()">
+        </div>
+        
+        <div class="attractions-scroll-container">
+            <button class="scroll-btn left" onclick="scrollContainer('left', '.attractions-list')">&#9664;</button>
+            <div class="attractions-list">
+                <div class="attraction-item">
+                    <h3>Rainforest Hike</h3>
+                    <img src="images/hike.jpg" alt="Rainforest Hike">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+                <div class="attraction-item">
+                    <h3>Beach Snorkeling</h3>
+                    <img src="images/snorkel.jpg" alt="Beach Snorkeling">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+                <div class="attraction-item">
+                    <h3>Volcano Tour</h3>
+                    <img src="images/volcano.jpg" alt="Volcano Tour">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+                <div class="attraction-item">
+                    <h3>Surfing</h3>
+                    <img src="images/surfing.jpg" alt="Surfing on Taniti Island">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+                <div class="attraction-item">
+                    <h3>Rock Climbing</h3>
+                    <img src="images/climbing.jpg" alt="Rock Climbing on Taniti Island">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+                <div class="attraction-item">
+                    <h3>Museum Visit</h3>
+                    <img src="images/museum.jpg" alt="Museum Visit">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+                <div class="attraction-item">
+                    <h3>Zip-lining</h3>
+                    <img src="images/zipline.jpg" alt="Zip-lining">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+                <div class="attraction-item">
+                    <h3>Pub Crawl</h3>
+                    <img src="images/pub.jpg" alt="Pub Crawl">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+                <div class="attraction-item">
+                    <h3>Helicopter Tours</h3>
+                    <img src="images/helicopter.jpg" alt="Helicopter Rides">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+                <div class="attraction-item">
+                    <h3>Art Gallery Tour</h3>
+                    <img src="images/art.jpg" alt="Art Gallery Tour">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+                <div class="attraction-item">
+                    <h3>Sunset Sailing</h3>
+                    <img src="images/sunset_sail.jpg" alt="Sunset Sailing">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+            </div>
+            <button class="scroll-btn right" onclick="scrollContainer('right', '.attractions-list')">&#9654;</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html#about-island" class="about-link">About Taniti</a> | 
+            <a href="terms.html">Terms of Service</a> | 
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="images/twitter.png" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="images/instagram.png" alt="Instagram">
+            </a>
+        </div>
+        <p>&copy; 2024 Taniti Island</p>
+    </footer>
+    
+    <script src="script.js"></script> 
+</body>
+</html>

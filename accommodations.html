@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taniti Island - Accommodations</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Allura&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo-slogan">
+                <a href="index.html" class="logo">
+                    <img src="images/logo.jpg" alt="Taniti Island Logo">
+                </a>
+                <span class="slogan">Where Paradise Meets Adventure</span>
+            </div>
+        </div>   
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="attractions.html">Attractions</a></li>
+                <li><a href="accommodations.html" class="active">Accommodations</a></li>
+                <li><a href="transportation.html">Transportation</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+            <form class="search-form" action="#" method="get">
+                <input type="text" placeholder="Search..." name="search">
+                <button type="submit">Go</button>
+            </form>
+        </nav>
+    </header>
+    
+    <section id="accommodations">
+        <h2>Accommodations</h2>
+
+        <div class="map-button-container">
+            <button class="map-toggle-button" onclick="toggleMap()">View Island Map</button>
+        </div>
+
+        <div class="map-container" id="island-map" style="display:none;">
+            <img src="images/map.jpg" alt="Map of Taniti Island" class="attractions-map">
+        </div>
+
+        <div class="filter-container">
+            <input type="text" id="filter-input" placeholder="Filter accommodations..." onkeyup="filterAccommodations()">
+        </div>
+        
+        <div class="accommodations-scroll-container">
+            <button class="scroll-btn left" onclick="scrollContainer('left', '.accommodations-list')">&#9664;</button>
+            <div class="accommodations-list">
+                <div class="accommodation-item">
+                    <h3>Azure Haven Resort</h3>
+                    <img src="images/hotel.jpg" alt="Four-Star Resort">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+                <div class="accommodation-item">
+                    <h3>Seashell Hostel</h3>
+                    <img src="images/beach_cottages.jpg" alt="Beachfront Hostel">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+                <div class="accommodation-item">
+                    <h3>Island Breeze Inn</h3>
+                    <img src="images/beach_house.jpg" alt="Family-Owned Hotel">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+                <div class="accommodation-item">
+                    <h3>Coral Cove Bungalows</h3>
+                    <img src="images/bungalows.jpg" alt="Over Water Bungalows">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+                <div class="accommodation-item">
+                    <h3>Sunrise Haven B&B</h3>
+                    <img src="images/bnb.jpg" alt="Bed & Breakfast">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+                <div class="accommodation-item">
+                    <h3>Ocean Whisper (Sailboat Stay)</h3>
+                    <img src="images/sailboat.jpg" alt="Sailboat Stay">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+                <div class="accommodation-item">
+                    <h3>Eclipse Serenity (Luxury Yacht Stay)</h3>
+                    <img src="images/yacht.jpg" alt="Yacht Stay">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+                <div class="accommodation-item">
+                    <h3>Lagoon Edge Campground</h3>
+                    <img src="images/camping.jpg" alt="Tent Campsite">
+                    <button class="learn-more" onclick="showMoreInfo()">Learn More</button>
+                </div>
+            </div>
+            <button class="scroll-btn right" onclick="scrollContainer('right', '.accommodations-list')">&#9654;</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html#about-island" class="about-link">About Taniti</a> | 
+            <a href="terms.html">Terms of Service</a> | 
+            <a href="privacy.html">Privacy Policy</a>
+        </div>
+        <div class="social-media">
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.twitter.com" target="_blank">
+                <img src="images/twitter.png" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="images/instagram.png" alt="Instagram">
+            </a>
+        </div>
+        <p>&copy; 2024 Taniti Island</p>
+    </footer>
+    
+    <script src="script.js"></script> 
+</body>
+</html>

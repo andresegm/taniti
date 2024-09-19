@@ -1,0 +1,609 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #409298;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header and Navigation Styling */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-slogan {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-height: 80px;
+    width: auto;
+    border-radius: 20%;
+    border: 2px solid white;
+}
+
+.slogan {
+    font-family: 'Allura', cursive;
+    font-size: 1.5em;
+    color: white;
+    margin-left: 10px;
+}
+
+
+
+nav {
+    background-color: #444444af;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.search-form input[type="text"],
+.search-form button {
+    padding: 5px;
+    border: none;
+}
+
+.search-form button {
+    background-color: #555;
+    color: white;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #777;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 700px;
+    object-fit: cover;
+}
+
+.hero h1, .hero p, .hero .button {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-decoration: none;
+}
+
+.hero h1 {
+    top: 20%;
+    font-size: 2.5em;
+}
+
+.hero p {
+    top: 35%;
+    font-size: 1.5em;
+}
+
+.hero .button {
+    top: 80%;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #da692c;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.hero .button:hover {
+    background-color: #844d1e;
+}
+
+/* Scrollable Containers */
+.attractions-scroll-container,
+.accommodations-scroll-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(64, 146, 152, 0.8);
+    border: none;
+    color: white;
+    font-size: 2em;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.scroll-btn.left {
+    left: -40px;
+}
+
+.scroll-btn.right {
+    right: -40px;
+}
+
+.scroll-btn:hover {
+    color: #777;
+}
+
+.attractions-list,
+.accommodations-list {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0 0 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.attraction-item,
+.accommodation-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    min-width: 300px;
+    scroll-snap-align: center;
+    text-align: center;
+    transition: opacity 0.3s;
+    opacity: 0.5;
+}
+
+.attractions-list .attraction-item:hover,
+.accommodations-list .accommodation-item:hover {
+    opacity: 1;
+}
+
+.attraction-item img,
+.accommodation-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.attraction-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+    height: 350px;
+    scroll-snap-align: center;
+    text-align: center;
+    transition: opacity 0.3s;
+    opacity: 0.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.attraction-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.learn-more {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #409298;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.learn-more:hover {
+    background-color: #da692c;
+}
+
+/* "View Island Map" Button */
+.map-button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.map-toggle-button {
+    padding: 10px 20px;
+    background-color: #3e8a61;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.map-toggle-button:hover {
+    background-color: #da692c;
+}
+
+/* See All Attractions Button */
+.see-all-attractions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.see-all-attractions .button {
+    background-color: #da692c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.see-all-attractions .button:hover {
+    background-color: #844d1e;
+    text-decoration: none;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.social-media {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.social-media img {
+    width: 24px;
+    height: 24px;
+}
+
+/* About the Island Section */
+.about-island {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: #73717176;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.about-island h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: white;
+}
+
+.about-content {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.about-content h3 {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+.about-content p, .about-content ul {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-content ul {
+    padding-left: 20px;
+}
+
+.about-content li {
+    margin-bottom: 10px;
+}
+
+/* Active Navigation Link */
+nav ul li a.active {
+    font-weight: bold;
+    color: #ffa500;
+    border-bottom: 2px solid #ffa500;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Map Container */
+.map-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.attractions-map {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Filter Container */
+.filter-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#filter-input {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Transportation Section */
+#transportation {
+    padding: 40px;
+    background-color: #409298;
+    text-align: center;
+}
+
+#transportation h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.transportation-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.transportation-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.transportation-card:hover {
+    transform: translateY(-10px);
+}
+
+.transport-icon {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.transportation-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #409298;
+}
+
+.transportation-card p {
+    margin-bottom: 20px;
+}
+
+/* Booking Page Styling */
+.booking-overlay {
+    position: relative;
+    background-image: url('/images/snorkel.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    font-size: 2.0em;
+}
+
+.booking-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: medium;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.booking-submit {
+    padding: 15px 30px;
+    background-color: #da692c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.booking-submit:hover {
+    background-color: #844d1e;
+}
+
+/* Contact Us Page Styling */
+.contact-overlay {
+    position: relative;
+    background-image: url('/images/bungalows.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+    text-align: center;
+    font-size: 2.0em;
+}
+
+#contact {
+    background-color: #409298;
+    padding: 40px;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.contact-container {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: medium;
+}
+
+.contact-submit {
+    padding: 15px 30px;
+    background-color: #da692c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.contact-submit:hover {
+    background-color: #844d1e;
+}
+
+/* Uniform Section Titles */
+#attractions h2,
+#accommodations h2,
+#booking h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: white;
+    margin-bottom: 30px;
+}
+
+/* Transportation Recommendations Section */
+#transportation-recommendations {
+    background-color: #f0f4f8;
+    padding: 40px;
+    text-align: center;
+}
+
+#transportation-recommendations h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.recommendations-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.recommendation-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.recommendation-item:hover {
+    transform: translateY(-10px);
+}
